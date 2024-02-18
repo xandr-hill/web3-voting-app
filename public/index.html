@@ -1,0 +1,36 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting App</title>
+</head>
+<body>
+  <h1>Voting App</h1>
+  <form id="registrationForm">
+    <label for="walletAddress">Wallet Address:</label>
+    <input type="text" id="walletAddress" name="walletAddress" required>
+    <label for="numberOfTokens">Number of Tokens:</label>
+    <input type="number" id="numberOfTokens" name="numberOfTokens" required>
+    <button type="button" onclick="registerVoter()">Register</button>
+</form>
+
+<hr>
+
+<form id="votingForm">
+  <label for="walletAddressVote">Wallet Address:</label>
+  <input type="text" id="walletAddressVote" name="walletAddressVote" required>
+  <label for="voteResult">Vote Result:</label>
+  <select id="voteResult" name="voteResult" required>
+    <option value="Accept">Accept</option>
+    <option value="Reject">Reject</option>
+    <option value="Abstain">Abstain</option>
+  </select>
+  <button type="button" onclick="submitVote()">Vote</button>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/web3@1.5.3/dist/web3.min.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
